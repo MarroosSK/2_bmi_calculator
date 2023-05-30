@@ -1,0 +1,9 @@
+@mixin heading-schema($heading_color, $heading_font-size){
+    color: $heading_color;
+    font-size: $heading_font-size;
+}
+
+@mixin flexContainer{
+    display: flex;
+    justify-content: space-between;
+}

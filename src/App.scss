@@ -1,0 +1,49 @@
+@use "./scss/mixins" as mixins;
+@use "./scss/variables" as vars;
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: vars.$fnt-base !important;
+  color: vars.$clr-black;
+}
+
+.heading {
+  @include mixins.heading-schema(yellow, 35px);
+}
+
+.bmi-btn{
+    &-yellow{
+      background-color: vars.$clr-ghost-white;
+      color: vars.$clr-dark;
+      border: 1px solid vars.$clr-yellow;
+  
+      &:active,
+      &:focus{
+        background-color: vars.$clr-ghost-white;
+        color: vars.$clr-yellow;
+        border: 1px solid vars.$clr-dark;
+      }
+    }
+  }
+
+
+
+.dark-mode{
+  width: 100vw;
+  min-height: 100vh;
+  color: vars.$clr-ghost-white !important;
+  background-color: vars.$clr-dark !important;
+}
+
+.dark-card {
+  background-color: vars.$clr-dark !important;
+  color: vars.$clr-ghost-white !important;
+}
